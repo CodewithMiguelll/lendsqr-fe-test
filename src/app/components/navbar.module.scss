@@ -1,0 +1,37 @@
+/* Navbar.module.scss */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 80px;
+  padding: 0 2rem;
+
+  background-color: white;
+  border-bottom: 1px solid;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  flex: 1;
+  justify-content: center;
+}
+
+.right {
+  gap: 1.5rem;
+}
+
+.searchButton {
+  padding: 8px 4px 4px 4px;
+  border: none;
+  border-radius: 4px;
+  background-color: #39cdcc;
+  color: white;
+  cursor: pointer;
+}

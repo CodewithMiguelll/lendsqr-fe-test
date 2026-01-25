@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <div className={styles.page}>
-      <h1 className={styles.title}>Welcome to My Next.js App</h1>
+      <h1 className={styles.title}>Welcome to Lendsqr</h1>
     </div>
     </>
   );

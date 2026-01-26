@@ -4,12 +4,13 @@ import Link from "next/link";
 import styles from "./navbar.module.scss";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
-import { Bell, ChevronDown, Search } from "lucide-react";
-import ProfileImg from '@/assets/images/count-chris-RtG1qZPYpaU-unsplash.jpg'
+import { Bell, ChevronDown, Menu, Search, XIcon } from "lucide-react";
+import ProfileImg from "@/assets/images/image-4.png";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <>
       <nav className={styles.navbar}>
@@ -30,17 +31,15 @@ const Navbar = () => {
         </div>
         {/* Navigation Links */}
         <div className={styles.right}>
-          <Link href="#">
-            Docs
-          </Link>
+          <Link href="#">Docs</Link>
           <Link className={styles.navlink} href="#">
             <Bell size={20} />
           </Link>
           <div className={styles.profile}>
             <Image
               src={ProfileImg}
-              width={40}
-              height={40}
+              width={45}
+              height={45}
               alt="User profile picture"
               className={styles.profileImage}
             />
@@ -48,6 +47,32 @@ const Navbar = () => {
               Ayomide <ChevronDown size={15} />
             </Link>
           </div>
+        </div>
+        {/* Hamburger Menu */}
+        <div className={styles.menuButton} onClick={() => setIsOpen(!isOpen)}>
+          <button className={styles.menuButton}>
+            {isOpen ? <XIcon size={24} /> : <Menu size={24} />}
+          </button>
+          {isOpen && (
+            <div className={styles.dropdownMenu}>
+              <Link className={styles.navlink} href="#">Docs</Link>
+              <Link className={styles.navlink} href="#">
+                Notifications <Bell size={20} />
+              </Link>
+              <div className={styles.profile}>
+                <Image
+                  src={ProfileImg}
+                  width={45}
+                  height={45}
+                  alt="User profile picture"
+                  className={styles.profileImage}
+                />
+                <Link className={styles.navlink} href="#">
+                  Ayomide <ChevronDown size={15} />
+                </Link>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </>

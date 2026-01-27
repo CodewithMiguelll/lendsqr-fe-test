@@ -58,14 +58,18 @@
   list-style: none;
   padding: 9px;
   margin: 9px;
-  opacity: 0.6;
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .sidebarMenu li:hover{
-  background-color: #39cdcdc4;
+  background-color: #4ff5f5;
   border-left: 4px solid #39cdcc;
   opacity: 1;
+}
+
+.sidebarMenu li:not(:hover){
+  opacity: 0.7;
 }
 
 .customersNav{
@@ -76,4 +80,18 @@
   text-decoration: none;
   color: #213f7d;
   font-weight: 400;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #213f7d;
+  margin: 3rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }

@@ -230,7 +230,10 @@ export default function Home() {
               </ul>
           </div>
         </div>
-        <div className={styles.content}></div>
+        <div className={styles.content}>
+          {/* Main content goes here */}
+          <h1 className={styles.title}>Users</h1>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.scss";
 import {
   Briefcase,
@@ -11,7 +10,6 @@ import {
   Users,
   PiggyBank,
   UserRoundX,
-  Banknote,
   Landmark,
   Coins,
   ReceiptText,
@@ -25,6 +23,8 @@ import {
 } from "lucide-react";
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
+import Card from "./components/card";
+import Dashboard from "./components/dashboard";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -227,12 +227,36 @@ export default function Home() {
                   Audit Log
                 </Link>
               </li>
-              </ul>
+            </ul>
           </div>
         </div>
         <div className={styles.content}>
           {/* Main content goes here */}
           <h1 className={styles.title}>Users</h1>
+          <div className={styles.usersOverview}>
+            <Card
+              icon={<UsersRound size={24} color="#E9B200" />}
+              title="Users"
+              description="2,453"
+            />
+            <Card
+              icon={<UsersRound size={24} color="#E9B200" />}
+              title=" Active Users"
+              description="2,453"
+            />
+            <Card
+              icon={<UsersRound size={24} color="#E9B200" />}
+              title="Users With Loans"
+              description="12,453"
+            />
+            <Card
+              icon={<UsersRound size={24} color="#E9B200" />}
+              backgroundColor="#E9B200"
+              title="Users With Savings"
+              description="102,453"
+            />
+          </div>
+          <Dashboard />
         </div>
       </div>
     </>

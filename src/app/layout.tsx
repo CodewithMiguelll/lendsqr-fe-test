@@ -25,9 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar/>
-      <body className={`${geistSans.className} ${geistMono.variable}`}>
-
+      <body suppressHydrationWarning ={true} className={`${geistSans.className} ${geistMono.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>

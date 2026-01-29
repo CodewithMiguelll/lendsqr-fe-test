@@ -16,7 +16,9 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         {/* Logo */}
         <div className={styles.left}>
+          <Link href="/">
           <Image src={Logo} width={95} height={20} alt="Lendsqr Logo" />
+          </Link>
         </div>
         {/* Search Bar */}
         <div className={styles.center}>

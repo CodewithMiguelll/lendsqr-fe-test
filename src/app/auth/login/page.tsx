@@ -1,6 +1,7 @@
 import styles from "./login.module.scss";
 import Logo from '@/assets/logo.png'
 import Illustration from '@/assets/pablo-sign-in 1.svg'
+import Link from "next/link";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -44,9 +45,11 @@ export default function LoginPage() {
               FORGOT PASSWORD?
             </a>
 
-            <button type="submit" className={styles.loginBtn}>
-              LOG IN
-            </button>
+            <Link href="/">
+              <button type="submit" className={styles.loginBtn}>
+                LOG IN
+              </button>
+            </Link>
           </form>
         </div>
       </div>

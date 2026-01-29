@@ -1,4 +1,4 @@
-import styles from './card.module.scss';
+import styles from '../styles/card.module.scss';
 
 interface CardProps {
   icon: React.ReactNode;

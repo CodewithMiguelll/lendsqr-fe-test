@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "../app/styles/page.module.scss";
 import {
   UsersRound,
   PiggyBank,

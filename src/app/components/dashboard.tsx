@@ -1,7 +1,7 @@
 "use client"; // Next.js App Router: ensures this is a client component
 
 import { useEffect, useState } from "react";
-import styles from "./dashboard.module.scss";
+import styles from "../styles/dashboard.module.scss";
 import { ListFilter } from "lucide-react";
 
 interface User {

@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lendsqr Frontend Assessment
+
+This project is a responsive admin dashboard built as part of the Lendsqr Frontend Engineering Assessment.  
+The application closely follows the provided Figma design and focuses on clean UI implementation, maintainable architecture, and predictable state-driven behavior.
+
+---
+
+## Features
+
+- User dashboard with tabular data
+- Client-side pagination
+- Multi-field filtering:
+  - Organization
+  - Username
+  - Email
+  - Phone number
+  - Date joined
+- User details page
+- Reusable UI components
+- Fully responsive layout
+
+---
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- SCSS (SASS Modules)
+- Mock API (JSON Generator)
+- Icon library with custom adaptations
+
+---
+
+## Design Notes
+
+Some icons used in the Figma design were not readily available in the chosen icon library.  
+In such cases, visually similar alternatives were used to preserve design intent and usability while maintaining overall visual consistency.
+
+---
+
+## Architectural Decisions
+
+- Client-side pagination was implemented since the dataset is fetched once and remains relatively small.
+- Filtering is applied before pagination to ensure accurate page counts and consistent user experience.
+- Shared UI elements such as the sidebar were extracted into reusable components to improve maintainability and reduce duplication.
+- SCSS modules were used to ensure scoped, predictable styling aligned with the provided design.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run dev
+```
+The application will be available at http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- ```app/``` : Contains the application routes and pages.
+- ```components/``` : Contains reusable UI components.
+- ```styles/``` : Contains SCSS modules for styling.
 
-To learn more about Next.js, take a look at the following resources:
+## Improvements With More Time
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Abstract filtering and pagination logic into reusable hooks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Introduce server-side pagination for large datasets
 
-## Deploy on Vercel
+- Expand accessibility support (ARIA roles, keyboard navigation)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Add unit and integration tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+- [Chikaima Uwakwe](https://github.com/CodeWithMiguelll)

@@ -22,7 +22,7 @@ import {
   BadgePercent,
   HandCoins,
 } from "lucide-react";
-import styles from "./sidebar.module.scss";
+import styles from "../styles/sidebar.module.scss";
 
 import { Work_Sans } from "next/font/google";
 const workSans = Work_Sans({

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import styles from "./navbar.module.scss";
+import styles from "../styles/navbar.module.scss";
 import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import { Bell, ChevronDown, Menu, Search, XIcon } from "lucide-react";

@@ -1,4 +1,4 @@
-import styles from "./login.module.scss";
+import styles from "../../styles/login.module.scss";
 import Logo from '@/assets/logo.png'
 import Illustration from '@/assets/pablo-sign-in 1.svg'
 import Link from "next/link";

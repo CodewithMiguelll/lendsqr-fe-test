@@ -43,7 +43,7 @@ const Navbar = () => {
               alt="User profile picture"
               className={styles.profileImage}
             />
-            <Link className={styles.navlink} href="#">
+            <Link className={styles.navlink} href="/auth/login">
               Ayomide <ChevronDown size={15} />
             </Link>
           </div>

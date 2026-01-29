@@ -80,19 +80,34 @@ export default function Dashboard() {
         <thead>
           <tr>
             <th onClick={toggleFilter} className={styles.tableHeader}>
-              ORGANIZATION <ListFilter size={16} />
+              <div className={styles.thContent}>
+                <span>Organization</span>
+                <ListFilter size={16} />
+              </div>
             </th>
             <th>
-              Username <ListFilter size={16} />
+              <div className={styles.thContent}>
+                <span>Username</span>
+                <ListFilter size={16} />
+              </div>
             </th>
             <th>
-              Email <ListFilter size={16} />
+              <div className={styles.thContent}>
+                <span>Email</span>
+                <ListFilter size={16} />
+              </div>
             </th>
             <th className={styles.hideOnMobile}>
-              Phone No. <ListFilter size={16} />
+              <div className={styles.thContent}>
+                <span>Phone No.</span>
+                <ListFilter size={16} />
+              </div>
             </th>
             <th className={styles.hideOnMobile}>
-              Date Joined <ListFilter size={16} />
+              <div className={styles.thContent}>
+                <span>Date Joined</span>
+                <ListFilter size={16} />
+              </div>
             </th>
             <th>Status</th>
           </tr>

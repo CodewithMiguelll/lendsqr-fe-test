@@ -36,6 +36,13 @@
   }
 }
 
+.thContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
 /* Status pills */
 .status {
   padding: 4px 10px;

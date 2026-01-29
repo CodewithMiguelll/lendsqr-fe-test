@@ -113,7 +113,7 @@ $text-grey: #545f7d;
   cursor: pointer;
   transition: 0.3s;
 
-  &:hover {
+  .loginBtn:hover {
     background-color: darken($accent-teal, 5%);
   }
 }

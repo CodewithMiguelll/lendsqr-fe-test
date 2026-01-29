@@ -22,6 +22,9 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    
   }
 
   tr {
@@ -62,6 +65,11 @@
   color: #e4033b;
 }
 
+.tableHeader {
+  position: relative;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .table {
     min-width: auto; // Allow the table to shrink
@@ -74,5 +82,122 @@
 
   .hideOnMobile {
     display: none;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.pageInfo {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+
+  &:hover {
+    background: #f2f2f2;
+  }
+}
+
+.activePage {
+  @extend .pageButton;
+  background: #213f7d;
+  color: white;
+  border-color: #213f7d;
+}
+
+$primary-blue: #213f7d;
+$accent-teal: #39cdcc;
+$text-grey: #545f7d;
+$border-color: rgba(33, 63, 125, 0.2);
+
+.filterContainer {
+  position: absolute;
+  top: 480px;
+  left: 360px;
+  z-index: 100;
+  background: #ffffff;
+  border: 1px solid $border-color;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px 20px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .filterGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-weight: 500;
+      font-size: 14px;
+      color: $text-grey;
+    }
+
+    input, select {
+      padding: 12px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      color: $primary-blue;
+      font-size: 14px;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba(84, 95, 125, 0.7);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $primary-blue;
+      }
+    }
+  }
+
+  .filterActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    button {
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: opacity 0.2s;
+
+      &:hover { opacity: 0.8; }
+    }
+
+    .resetBtn {
+      background: transparent;
+      border: 1px solid $text-grey;
+      color: $text-grey;
+    }
+
+    .submitBtn {
+      background: $accent-teal;
+      border: none;
+      color: #fff;
+    }
   }
 }

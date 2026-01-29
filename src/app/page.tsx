@@ -20,6 +20,7 @@ import {
   SlidersHorizontal,
   Clipboard,
   BadgePercent,
+  HandCoins,
 } from "lucide-react";
 import { Work_Sans } from "next/font/google";
 import Link from "next/link";
@@ -31,6 +32,7 @@ const workSans = Work_Sans({
   weight: ["400", "500", "600", "700"],
 });
 export default function Home() {
+
   return (
     <>
       <div className={`${workSans.className} ${styles.page}`}>
@@ -235,23 +237,26 @@ export default function Home() {
           <h1 className={styles.title}>Users</h1>
           <div className={styles.usersOverview}>
             <Card
-              icon={<UsersRound size={24} color="#E9B200" />}
+              icon={<UsersRound size={24} color="#df18ff" />}
+              backgroundColor="#eb9df7"
               title="Users"
               description="2,453"
             />
             <Card
-              icon={<UsersRound size={24} color="#E9B200" />}
+              icon={<UsersRound size={24} color="#5718ff" />}
+              backgroundColor="#d3bffa"
               title=" Active Users"
               description="2,453"
             />
             <Card
-              icon={<UsersRound size={24} color="#E9B200" />}
+              icon={<HandCoins size={24} color="#f55f44" />}
+              backgroundColor="#f8b9b0"
               title="Users With Loans"
               description="12,453"
             />
             <Card
-              icon={<UsersRound size={24} color="#E9B200" />}
-              backgroundColor="#E9B200"
+              icon={<PiggyBank size={24} color="#ff3366" />}
+              backgroundColor="#fca4ba"
               title="Users With Savings"
               description="102,453"
             />
